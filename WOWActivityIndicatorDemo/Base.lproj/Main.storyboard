@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A244d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WOWActivityIndicatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Jj-cq-fse" customClass="WOWActivityIndicator" customModule="WOWActivityIndicatorDemo" customModuleProvider="target">
+                                <rect key="frame" x="46" y="28" width="160" height="160"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.67450980390000004" blue="0.89411764709999997" alpha="0.41742995690000001" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Grr-56-s8X"/>
+                                    <constraint firstAttribute="width" constant="160" id="kc6-bl-yql"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="markerCount">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rle-vK-Kqs" customClass="WOWActivityIndicator" customModule="WOWActivityIndicatorDemo" customModuleProvider="target">
+                                <rect key="frame" x="46" y="196" width="80" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="YZX-nJ-Tdx"/>
+                                    <constraint firstAttribute="width" constant="80" id="sTK-Fa-PUP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="markerCount">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOe-t7-eSa" customClass="WOWActivityIndicator" customModule="WOWActivityIndicatorDemo" customModuleProvider="target">
+                                <rect key="frame" x="153" y="196" width="80" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="PQV-2S-55t"/>
+                                    <constraint firstAttribute="height" constant="80" id="XDo-Ij-CAw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="markerCount">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFh-FD-qG0" customClass="WOWActivityIndicator" customModule="WOWActivityIndicatorDemo" customModuleProvider="target">
+                                <rect key="frame" x="46" y="284" width="120" height="120"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.75" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="MDA-Wf-9aU"/>
+                                    <constraint firstAttribute="width" constant="120" id="epf-uC-V14"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="markerCount">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Z3-aG-RYD">
+                                <rect key="frame" x="284" y="550" width="32" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGV-8p-gkY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HOe-t7-eSa" firstAttribute="leading" secondItem="Rle-vK-Kqs" secondAttribute="trailing" constant="27" id="IfO-ZH-2uA"/>
+                            <constraint firstItem="UFh-FD-qG0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="Iud-fg-TC3"/>
+                            <constraint firstItem="HOe-t7-eSa" firstAttribute="top" secondItem="3Jj-cq-fse" secondAttribute="bottom" constant="8" symbolic="YES" id="Jsv-e2-Ruj"/>
+                            <constraint firstItem="3Jj-cq-fse" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="46" id="VkW-gK-rk9"/>
+                            <constraint firstItem="4Z3-aG-RYD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X48-gZ-k5d"/>
+                            <constraint firstItem="Rle-vK-Kqs" firstAttribute="top" secondItem="3Jj-cq-fse" secondAttribute="bottom" constant="8" symbolic="YES" id="Y1M-XT-5QK"/>
+                            <constraint firstItem="UFh-FD-qG0" firstAttribute="top" secondItem="HOe-t7-eSa" secondAttribute="bottom" constant="8" symbolic="YES" id="beJ-iN-7hf"/>
+                            <constraint firstItem="3Jj-cq-fse" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="mtP-lV-js7"/>
+                            <constraint firstItem="Rle-vK-Kqs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="oon-C2-yjM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Z3-aG-RYD" secondAttribute="bottom" constant="20" id="wSm-nY-1r4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator1" destination="3Jj-cq-fse" id="z0c-BV-lKd"/>
+                        <outlet property="indicator2" destination="Rle-vK-Kqs" id="zUS-lh-jeD"/>
+                        <outlet property="indicator3" destination="HOe-t7-eSa" id="y3k-fR-fje"/>
+                        <outlet property="indicator4" destination="UFh-FD-qG0" id="ajI-hq-Vvd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="362"/>
+        </scene>
+    </scenes>
+</document>

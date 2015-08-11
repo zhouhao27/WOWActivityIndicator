@@ -1,0 +1,3 @@
+- To decrease the marker size gradually
+- To show different color for markers
+- To draw markers in CAShapeLayer
