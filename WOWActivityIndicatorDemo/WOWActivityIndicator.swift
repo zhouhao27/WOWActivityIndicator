@@ -48,6 +48,10 @@ public class WOWActivityIndicator: UIView {
         }
     }
 
+    @IBInspectable public var isFading : Bool = true
+    @IBInspectable public var isScaling : Bool = false
+    @IBInspectable public var scaleFactor : CGFloat = 0.01
+
 #if !TARGET_INTERFACE_BUILDER
     // This called before properties setup in IB
     override init(frame: CGRect) {
@@ -88,7 +92,7 @@ public class WOWActivityIndicator: UIView {
 
         spinnerReplicator = CAReplicatorLayer()
         spinnerReplicator.bounds = self.bounds
-        spinnerReplicator.position = CGPointMake(self.frame.width/CGFloat(2),self.frame.height/CGFloat(2))
+        spinnerReplicator.position = CGPointMake(self.frame.width/2.0,self.frame.height/2.0)
         
         let angle = CGFloat(2.0*M_PI)/CGFloat(markerCount)
         let instanceRotation = CATransform3DMakeRotation(angle, 0.0, 0.0, 1.0)
@@ -101,26 +105,44 @@ public class WOWActivityIndicator: UIView {
         
     }
     
+    // MARK: public methods
     public func startAnimation() {
-        
-        marker.opacity = 0
-        
-        let fade = CABasicAnimation(keyPath: "opacity")
-        fade.fromValue = 1.0
-        fade.toValue = 0.0
-        fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        fade.repeatCount = Float.infinity
-        fade.duration = duration
-        
+
         let markerAnimationDuration = duration/Double(markerCount)
         spinnerReplicator.instanceDelay = markerAnimationDuration
-        marker.addAnimation(fade, forKey: kMarkerAnimationKey)
         
+        if isFading {
+            marker.opacity = 0
+            
+            // fade effect
+            let fade = CABasicAnimation(keyPath: "opacity")
+            fade.fromValue = 1.0
+            fade.toValue = 0.0
+            fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            fade.repeatCount = Float.infinity
+            fade.duration = duration
+            
+            marker.addAnimation(fade, forKey: kMarkerAnimationKey)
+        }
+        
+        // shrink effect
+        if isScaling {
+            marker.transform = CATransform3DMakeScale(scaleFactor, scaleFactor, 1)
+            let shrink = CABasicAnimation(keyPath:"transform.scale")
+            shrink.fromValue = 1.0
+            shrink.toValue = scaleFactor
+            shrink.duration = duration
+            shrink.repeatCount = Float.infinity
+            
+            marker.addAnimation(shrink,forKey:"")
+        }
     }
     
     public func stopAnimation() {
         
-        marker.removeAllAnimations()        
+        marker.removeAllAnimations()
+        marker = nil
+        spinnerReplicator = nil
     }
 
 }
