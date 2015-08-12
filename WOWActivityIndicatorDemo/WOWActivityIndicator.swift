@@ -38,6 +38,15 @@ public class WOWActivityIndicator: UIView {
     @IBInspectable public var length  : CGFloat = 24.0
     @IBInspectable public var duration : Double = 1.0
     @IBInspectable public var padding : CGFloat = 5.0
+    @IBInspectable public var markerRadiusFactor : CGFloat = 0.5 {
+        didSet {
+            if markerRadiusFactor > 0.5 {
+                markerRadiusFactor = 0.5
+            } else if markerRadiusFactor < -0.5 {
+                markerRadiusFactor = -0.5
+            }
+        }
+    }
 
 #if !TARGET_INTERFACE_BUILDER
     // This called before properties setup in IB
@@ -72,7 +81,7 @@ public class WOWActivityIndicator: UIView {
         let radius = min(self.frame.width,self.frame.height)/2
         
         marker.bounds = CGRectMake(0, 0, thickness, length)
-        marker.cornerRadius = thickness*0.5
+        marker.cornerRadius = min(thickness,length)*markerRadiusFactor
         marker.backgroundColor = tintColor.CGColor
         
         marker.position = CGPointMake(self.bounds.width*0.5,self.bounds.height*0.5 + radius - length - padding)
