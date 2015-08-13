@@ -44,11 +44,6 @@ public class WOWActivityIndicator: UIView {
             setup()
         }
     }
-    @IBInspectable public var duration : Double = 1.0 {
-        didSet {
-            setup()
-        }
-    }
     @IBInspectable public var padding : CGFloat = 5.0 {
         didSet {
             setup()
@@ -64,22 +59,10 @@ public class WOWActivityIndicator: UIView {
             setup()
         }
     }
-
-    @IBInspectable public var isFading : Bool = true {
-        didSet {
-            setup()
-        }
-    }
-    @IBInspectable public var isScaling : Bool = false {
-        didSet {
-            setup()
-        }
-    }
-    @IBInspectable public var scaleFactor : CGFloat = 0.01 {
-        didSet {
-            setup()
-        }
-    }
+    @IBInspectable public var duration : Double = 1.0
+    @IBInspectable public var isFading : Bool = true
+    @IBInspectable public var isScaling : Bool = false
+    @IBInspectable public var scaleFactor : CGFloat = 0.01
 
 #if !TARGET_INTERFACE_BUILDER
     // This called before properties setup in IB
