@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A244d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Jj-cq-fse" customClass="WOWActivityIndicator" customModule="WOWActivityIndicatorDemo" customModuleProvider="target">
-                                <rect key="frame" x="46" y="28" width="160" height="160"/>
+                                <rect key="frame" x="120" y="28" width="160" height="160"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.67450980390000004" blue="0.89411764709999997" alpha="0.41742995690000001" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -135,7 +135,7 @@
                             <constraint firstItem="HOe-t7-eSa" firstAttribute="leading" secondItem="Rle-vK-Kqs" secondAttribute="trailing" constant="27" id="IfO-ZH-2uA"/>
                             <constraint firstItem="UFh-FD-qG0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="Iud-fg-TC3"/>
                             <constraint firstItem="HOe-t7-eSa" firstAttribute="top" secondItem="3Jj-cq-fse" secondAttribute="bottom" constant="8" symbolic="YES" id="Jsv-e2-Ruj"/>
-                            <constraint firstItem="3Jj-cq-fse" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="46" id="VkW-gK-rk9"/>
+                            <constraint firstItem="3Jj-cq-fse" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="120" id="VkW-gK-rk9"/>
                             <constraint firstItem="4Z3-aG-RYD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X48-gZ-k5d"/>
                             <constraint firstItem="Rle-vK-Kqs" firstAttribute="top" secondItem="3Jj-cq-fse" secondAttribute="bottom" constant="8" symbolic="YES" id="Y1M-XT-5QK"/>
                             <constraint firstItem="UFh-FD-qG0" firstAttribute="top" secondItem="HOe-t7-eSa" secondAttribute="bottom" constant="8" symbolic="YES" id="beJ-iN-7hf"/>
