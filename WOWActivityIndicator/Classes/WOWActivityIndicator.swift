@@ -60,7 +60,6 @@ open class WOWActivityIndicator: UIView {
         }
     }
     @IBInspectable open var duration : Double = 1.0
-//    @IBInspectable open var isFading : Bool = true
     @IBInspectable open var isScaling : Bool = false
     @IBInspectable open var scaleFactor : CGFloat = 0.01
 
@@ -130,19 +129,16 @@ open class WOWActivityIndicator: UIView {
         let markerAnimationDuration = duration/Double(markerCount)
         spinnerReplicator.instanceDelay = markerAnimationDuration
         
-//        if isFading {
-            marker.opacity = 0
-            
-            // fade effect
-            let fade = CABasicAnimation(keyPath: "opacity")
-            fade.fromValue = 1.0
-            fade.toValue = 0.0
-            fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-            fade.repeatCount = Float.infinity
-            fade.duration = duration
-            
-            marker.add(fade, forKey: "")
-//        }
+        marker.opacity = 0
+    
+        let fade = CABasicAnimation(keyPath: "opacity")
+        fade.fromValue = 1.0
+        fade.toValue = 0.0
+        fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        fade.repeatCount = Float.infinity
+        fade.duration = duration
+        
+        marker.add(fade, forKey: "")
         
         // shrink effect
         if isScaling {

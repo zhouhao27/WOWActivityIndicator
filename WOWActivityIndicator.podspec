@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WOWActivityIndicator'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Customizable activity indication in Swift 3.0.'
 
   s.description      = <<-DESC
