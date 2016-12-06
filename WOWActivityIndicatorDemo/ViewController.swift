@@ -20,10 +20,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        indicator5 = WOWActivityIndicator(frame: CGRectMake(20,20,80,80))
+        indicator5 = WOWActivityIndicator(frame: CGRect(x: 20,y: 20,width: 80,height: 80))
         self.view.addSubview(indicator5)
-        indicator5.backgroundColor = UIColor.clearColor()
-        indicator5.tintColor = UIColor.orangeColor()
+        indicator5.backgroundColor = UIColor.clear
+        indicator5.tintColor = UIColor.orange
         indicator5.markerCount = 8
         indicator5.markerRadiusFactor = 0
         indicator5.thickness = 8
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func stopAnimation(sender: AnyObject) {
+    @IBAction func stopAnimation(_ sender: AnyObject) {
         
         indicator1.stopAnimation()
         indicator2.stopAnimation()

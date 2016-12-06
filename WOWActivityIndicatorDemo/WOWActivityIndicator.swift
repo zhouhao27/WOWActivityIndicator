@@ -9,14 +9,14 @@
 import UIKit
 
 @IBDesignable
-public class WOWActivityIndicator: UIView {
+open class WOWActivityIndicator: UIView {
     
     // MARK: private member variables
     var spinnerReplicator : CAReplicatorLayer!
     var marker : CALayer!
     
     // MARK: Inspectable variables
-    @IBInspectable public var markerCount : Int = 6 {
+    @IBInspectable open var markerCount : Int = 6 {
 
         didSet {
             if markerCount < 6 {
@@ -26,7 +26,7 @@ public class WOWActivityIndicator: UIView {
         }
     }
     
-    @IBInspectable public var cornerRadius : CGFloat = 5.0 {
+    @IBInspectable open var cornerRadius : CGFloat = 5.0 {
         
         didSet {
             layer.cornerRadius = cornerRadius
@@ -34,22 +34,22 @@ public class WOWActivityIndicator: UIView {
         }
     }
     
-    @IBInspectable public var thickness : CGFloat = 16.0 {
+    @IBInspectable open var thickness : CGFloat = 16.0 {
         didSet {
             setup()
         }
     }
-    @IBInspectable public var length  : CGFloat = 24.0 {
+    @IBInspectable open var length  : CGFloat = 24.0 {
         didSet {
             setup()
         }
     }
-    @IBInspectable public var padding : CGFloat = 5.0 {
+    @IBInspectable open var padding : CGFloat = 5.0 {
         didSet {
             setup()
         }
     }
-    @IBInspectable public var markerRadiusFactor : CGFloat = 0.5 {
+    @IBInspectable open var markerRadiusFactor : CGFloat = 0.5 {
         didSet {
             if markerRadiusFactor > 0.5 {
                 markerRadiusFactor = 0.5
@@ -59,10 +59,10 @@ public class WOWActivityIndicator: UIView {
             setup()
         }
     }
-    @IBInspectable public var duration : Double = 1.0
-    @IBInspectable public var isFading : Bool = true
-    @IBInspectable public var isScaling : Bool = false
-    @IBInspectable public var scaleFactor : CGFloat = 0.01
+    @IBInspectable open var duration : Double = 1.0
+    @IBInspectable open var isFading : Bool = true
+    @IBInspectable open var isScaling : Bool = false
+    @IBInspectable open var scaleFactor : CGFloat = 0.01
 
 #if !TARGET_INTERFACE_BUILDER
     // This called before properties setup in IB
@@ -79,14 +79,14 @@ public class WOWActivityIndicator: UIView {
 
 #endif
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         
         setup()
     }
     
     // This will be called in build time in IB so that it will be shown correctly
     // in storyboard
-    public override func prepareForInterfaceBuilder() {
+    open override func prepareForInterfaceBuilder() {
         
         setup()
     }
@@ -99,7 +99,7 @@ public class WOWActivityIndicator: UIView {
         
         spinnerReplicator = CAReplicatorLayer()
         spinnerReplicator.bounds = self.bounds
-        spinnerReplicator.position = CGPointMake(self.frame.width/2.0,self.frame.height/2.0)
+        spinnerReplicator.position = CGPoint(x: self.frame.width/2.0,y: self.frame.height/2.0)
         
         let angle = CGFloat(2.0*M_PI)/CGFloat(markerCount)
         let instanceRotation = CATransform3DMakeRotation(angle, 0.0, 0.0, 1.0)
@@ -113,11 +113,11 @@ public class WOWActivityIndicator: UIView {
         marker = CALayer()
         let radius = min(self.frame.width,self.frame.height)/2
         
-        marker.bounds = CGRectMake(0, 0, thickness, length)
+        marker.bounds = CGRect(x: 0, y: 0, width: thickness, height: length)
         marker.cornerRadius = min(thickness,length)*markerRadiusFactor
-        marker.backgroundColor = tintColor.CGColor
+        marker.backgroundColor = tintColor.cgColor
         
-        marker.position = CGPointMake(self.bounds.width*0.5,self.bounds.height*0.5 + radius - length - padding)
+        marker.position = CGPoint(x: self.bounds.width*0.5,y: self.bounds.height*0.5 + radius - length - padding)
         
         spinnerReplicator.addSublayer(marker)
         self.layer.addSublayer(spinnerReplicator)
@@ -125,7 +125,7 @@ public class WOWActivityIndicator: UIView {
     }
     
     // MARK: public methods
-    public func startAnimation() {
+    open func startAnimation() {
 
         let markerAnimationDuration = duration/Double(markerCount)
         spinnerReplicator.instanceDelay = markerAnimationDuration
@@ -141,7 +141,7 @@ public class WOWActivityIndicator: UIView {
             fade.repeatCount = Float.infinity
             fade.duration = duration
             
-            marker.addAnimation(fade, forKey: "")
+            marker.add(fade, forKey: "")
         }
         
         // shrink effect
@@ -153,11 +153,11 @@ public class WOWActivityIndicator: UIView {
             shrink.duration = duration
             shrink.repeatCount = Float.infinity
             
-            marker.addAnimation(shrink,forKey:"")
+            marker.add(shrink,forKey:"")
         }
     }
     
-    public func stopAnimation() {
+    open func stopAnimation() {
         
         spinnerReplicator.removeFromSuperlayer()
         spinnerReplicator = nil
