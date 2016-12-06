@@ -1,0 +1,6 @@
+framework module WOWActivityIndicator {
+  umbrella header "WOWActivityIndicator-umbrella.h"
+
+  export *
+  module * { export * }
+}

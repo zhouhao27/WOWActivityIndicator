@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'WOWActivityIndicator_Example' do
+  pod 'WOWActivityIndicator', :path => '../'
+
+  target 'WOWActivityIndicator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

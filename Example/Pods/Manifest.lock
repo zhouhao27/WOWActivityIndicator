@@ -1,0 +1,16 @@
+PODS:
+  - WOWActivityIndicator (0.1.0)
+
+DEPENDENCIES:
+  - WOWActivityIndicator (from `../`)
+
+EXTERNAL SOURCES:
+  WOWActivityIndicator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WOWActivityIndicator: b9a74e7ff9aea719637f0c0695e2cd91bdf820cc
+
+PODFILE CHECKSUM: 4a9ae9786ac4c4237946261020d3ea1e35f6a49e
+
+COCOAPODS: 1.2.0.beta.1
